@@ -1,0 +1,295 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* Catchy gradient background */
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-attachment: fixed;
+  text-align: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #5D5CDE, #a78bfa);
+  border-radius: 2px;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* ExpenseForm Styles */
+.expense-form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  border: 1px solid rgba(93, 92, 222, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.expense-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #5D5CDE, #a78bfa);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-group input:focus {
+  border-color: #5D5CDE;
+  box-shadow: 0 0 0 3px rgba(93, 92, 222, 0.15);
+  outline: none;
+}
+
+.add-button {
+  background: linear-gradient(to right, #5D5CDE, #7a79e0);
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(93, 92, 222, 0.2);
+}
+
+.add-button:hover {
+  background: linear-gradient(to right, #4a49b8, #6766cf);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(93, 92, 222, 0.25);
+}
+
+.add-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(93, 92, 222, 0.2);
+}
+
+/* SearchBar Styles */
+.search-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #5D5CDE;
+  box-shadow: 0 0 0 3px rgba(93, 92, 222, 0.15);
+  outline: none;
+}
+
+/* ExpenseTable Styles */
+.expense-table {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  border: 1px solid rgba(93, 92, 222, 0.1);
+}
+
+.expense-table::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #5D5CDE, #a78bfa);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  color: #444;
+  position: relative;
+}
+
+.sortable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sortable:hover {
+  background-color: #f0f0ff;
+  color: #5D5CDE;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+.delete-button {
+  background: linear-gradient(to right, #ff4d4d, #ff6b6b);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(255, 77, 77, 0.2);
+}
+
+.delete-button:hover {
+  background: linear-gradient(to right, #e60000, #ff5252);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.25);
+}
+
+.delete-button:active {
+  transform: translateY(0);
+}
+
+.no-expenses {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  th, td {
+    padding: 10px 8px;
+  }
+  
+  .expense-form, .expense-table {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+  
+  .add-button {
+    width: 100%;
+  }
+}
+
+/* Animation for new expenses */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+tr:first-child {
+  animation: fadeIn 0.5s ease-out;
+}
