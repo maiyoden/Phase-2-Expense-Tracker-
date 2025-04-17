@@ -37,12 +37,12 @@ bash
 Copy
 npm run dev
 Open your browser and navigate to http://localhost:5173.
-Live Demo
+
+**Live Demo**
 You can view the live application at: https://github.com/maiyoden/Phase-2-Expense-Tracker-
 
-Authors
-Denis Maiyo
+## Author
+Name:Denis Maiyo
 Email: denis.maiyo@student.moringaschool.com
-GitHub Repository
-Find the project repository at:https://github.com/maiyoden/Phase-2-Expense-Tracker- 
+GitHub Repository:https://github.com/maiyoden/Phase-2-Expense-Tracker- 
 
