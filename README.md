@@ -26,6 +26,23 @@ Expense Tracker is a single-page web application that allows users to record, or
    ```bash
    git clone [repository-url]
    cd expense-tracker
+Install dependencies:
+bash
 
-   Author: Denis Maiyo Email: denis.maiyo@student.moringaschool.com
-   GitHub:https://github.com/maiyoden/phase-1-project
+Copy
+npm install
+Start the development server:
+bash
+
+Copy
+npm run dev
+Open your browser and navigate to http://localhost:5173.
+Live Demo
+You can view the live application at: https://github.com/maiyoden/Phase-2-Expense-Tracker-
+
+Authors
+Denis Maiyo
+Email: denis.maiyo@student.moringaschool.com
+GitHub Repository
+Find the project repository at:https://github.com/maiyoden/Phase-2-Expense-Tracker- 
+
