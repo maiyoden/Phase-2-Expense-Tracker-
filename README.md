@@ -26,3 +26,6 @@ Expense Tracker is a single-page web application that allows users to record, or
    ```bash
    git clone [repository-url]
    cd expense-tracker
+
+   Author: Denis Maiyo Email: denis.maiyo@student.moringaschool.com
+   GitHub:https://github.com/maiyoden/phase-1-project
